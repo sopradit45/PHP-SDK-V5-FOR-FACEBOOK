@@ -23,7 +23,7 @@ $helper = $fb->getRedirectLoginHelper();
 //เป็นการ นำค่าของ app_id ,app_secret, Graph API  ที่เก็บไว้ในตัวแปล $fb ไปตรวจสอบ ผ่านgetRedirectLoginHelper()
  
 $permissions = ['email']; // Optional permissions
-$loginUrl = $helper->getLoginUrl('http://localhost/facebook-adk-Manually/fb-callback.php', $permissions);
+$loginUrl = $helper->getLoginUrl('http://localhost/facebook-adk/fb-callback.php', $permissions);
 //เมื่อ ผ่าน จะส่งค่าที่ได้ไปยัง fb-callback.php  เพื่อที่จะได้ใช้งานต่อ
 echo '<a href="' . htmlspecialchars($loginUrl) . '"><img src="img/loginfacebook.gif"></a>'; htmlspecialchars($loginUrl) . '"><img src="img/loginfacebook.gif"></a>';
 
