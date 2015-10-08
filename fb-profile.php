@@ -72,12 +72,12 @@ if(isset($_SESSION['facebook_access_token'])) {
         echo '<hr width="300" align="left" > รหัส ไอดีของคุณ  :  ' . $userNode->getId();
         echo ' <hr width="300" align="left" > อีเมลล์ของคุณ :  ' . $userNode->getEmail();
         echo '<hr width="300" align="left" >';
-        $LogutUrl=$helper->getLogoutUrl('http://localhost/Mycont-fb/User-show.php',$accessToken);
-        echo '<a href="'.$LogutUrl .'">logut</a>';
+        $LogutUrl=$helper->getLogoutUrl('http://localhost/facebook-adk/User-show.php',$accessToken);
+        //echo '<a href="'.$LogutUrl .'">logut</a>';
        
 }else {
 	$permissions = ['email']; // optional
-	$loginUrl = $helper->getLoginUrl('http://localhost/Mycont-fb/User-show.php', $permissions);
+	$loginUrl = $helper->getLoginUrl('http://localhost/facebook-adk/User-show.php', $permissions);
 
 	echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 }
